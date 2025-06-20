@@ -9,21 +9,21 @@ const Index = () => {
   const { toast } = useToast();
   const [copied, setCopied] = useState(false);
   
-  const contractAddress = "G9J2KRME69XE0D258P5UH9T35A95WPPGPDIG7MUPUMP";
+  // const contractAddress = "G9J2KRME69XE0D258P5UH9T35A95WPPGPDIG7MUPUMP";
 
-  const copyToClipboard = async () => {
-    try {
-      await navigator.clipboard.writeText(contractAddress);
-      setCopied(true);
-      toast({
-        title: "Copied!",
-        description: "Contract address copied to clipboard",
-      });
-      setTimeout(() => setCopied(false), 2000);
-    } catch (err) {
-      console.error('Failed to copy: ', err);
-    }
-  };
+  // const copyToClipboard = async () => {
+  //   try {
+  //     await navigator.clipboard.writeText(contractAddress);
+  //     setCopied(true);
+  //     toast({
+  //       title: "Copied!",
+  //       description: "Contract address copied to clipboard",
+  //     });
+  //     setTimeout(() => setCopied(false), 2000);
+  //   } catch (err) {
+  //     console.error('Failed to copy: ', err);
+  //   }
+  // };
 
   const handleSocialClick = (platform: string) => {
     const urls = {
@@ -59,7 +59,7 @@ const Index = () => {
             </h1>
             
             {/* Contract Address */}
-            <div className="bg-white bg-opacity-90 rounded-lg p-4 mb-6 max-w-2xl mx-auto lg:mx-0">
+            {/*<div className="bg-white bg-opacity-90 rounded-lg p-4 mb-6 max-w-2xl mx-auto lg:mx-0">
               <div className="flex items-center justify-between flex-wrap gap-2">
                 <span className="font-fredoka font-semibold text-gray-800 text-sm lg:text-base break-all">
                   {contractAddress}
@@ -75,7 +75,7 @@ const Index = () => {
                   {copied ? 'COPIED!' : 'COPY'}
                 </button>
               </div>
-            </div>
+            </div>*/}
 
             {/* Social Icons */}
             <div className="flex gap-4 justify-center lg:justify-start">
